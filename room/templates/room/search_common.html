@@ -1,10 +1,14 @@
 
 <div class="search_div mx-auto">
     <form class="form-inline my-2 my-lg-0 " action="{% url 'room:search' %}" method="get">
-        <div>
-            <label name="cb">월세 <input class="checkbox-row" type="checkbox" name="cb" value="월세"></label>&nbsp;
-            <label name="cb">전세 <input class="checkbox-row" type="checkbox" name="cb" value="전세"></label>&nbsp;
-            <label name="cb">매매 <input class="checkbox-row" type="checkbox" name="cb" value="매매"></label>&nbsp;
+        <div style="margin-right: auto">
+            <label name="cb">월세 <input class="checkbox-row" type="radio" name="cb" value="월세"></label>&nbsp;
+        </div>
+        <div style="margin-right: auto">
+            <label name="cb">전세 <input class="checkbox-row" type="radio" name="cb" value="전세"></label>&nbsp;
+        </div>
+        <div style="margin-right: auto">
+            <label name="cb">매매 <input class="checkbox-row" type="radio" name="cb" value="매매"></label>&nbsp;
         </div>
 
         <div class="input-group">
