@@ -3,7 +3,7 @@
         <tr>
             <th scope="col">id</th>
             <th scope="col">건물종류</th>
-            <th scope="col">비디오</th>
+            <th scope="col">공간 면적</th>
             <th scope="col">매매종류</th>
             <th scope="col">가격</th>
             <th scope="col">주소</th>
@@ -16,10 +16,10 @@
             <tr>
                 <td>{{ object.id }}</td>
                 <td><a href="{% url 'room:detail' object.id %}">{{ object.name }}</a></td>
-                <td>{{ object.media }}</td>
+                <td>{{ object.space }}</td>
                 <td>{{ object.select }}</td>
                 <td>{{ object.price_num }}{{ object.price_str }}</td>
-                <td>{{ object.address }}</td>
+                <td>{{ object.address }} {{ object.address_detail }}</td>
             </tr>
         {% endfor %}
 

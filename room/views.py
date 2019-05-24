@@ -22,6 +22,8 @@ def pre_save(sender, instance, **kwagrs):
     instance.price_real = price_n * price_s
 
 
+
+
 def showmedia(request):
     page = int(request.GET.get('page', 1))
     paginated_by = 5
@@ -32,6 +34,8 @@ def showmedia(request):
     end_index = paginated_by * page
     rooms = rooms[start_index:end_index]
     rng = range(1, math.ceil(total_count / paginated_by) + 1)
+
+
 
     context = {
         'object_list': rooms,
@@ -134,6 +138,7 @@ def detail(request, pk):
         document = Media.objects.get(pk=pk)
         vdo = str(document.media)[-3:-1]
         address = document.address
+        full_address = document.address + " " + document.address_detail
         # full_address = 도로명 주소 + 상세 주소
         # 예)성수동 상원길 63 쌍용아파트 107동 101호 = 상원길 63 + 쌍용아파트 107동 101호
 
@@ -158,5 +163,7 @@ def detail(request, pk):
                                                           'extension': vdo,
                                                           'address': address, 'coord_lat': coord_lat,
                                                           'coord_long': coord_long, 'jb_address': jb_address,
-                                                          'rd_address': rd_address})
+                                                          'rd_address': rd_address,
+                                                          'full_address': full_address,
+                                                          })
 

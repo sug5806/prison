@@ -23,13 +23,8 @@
 
             {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Create</a>
-                </li>
-
-                <li class="nav-item">
                     <a class="nav-link" href="{% url 'account_logout' %}">로그아웃</a>
                 </li>
-
             {% else %}
                 <li>
                     <a class="nav-link" href="{% url 'account_login' %}">로그인</a>
