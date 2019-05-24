@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Detail
+{% endblock %}
+
+{% load staticfiles %}
+{% block content %}
+
+    <style>
+        .card-title {
+            font-size: 50px;
+            font-family: "SansSerif"
+        }
+
+        .card-text {
+
+        }
+
+        .price, .select {
+            font-family: "SansSerif";
+            margin-left: 10px;
+            font-size: 30px;
+        }
+
+        .address {
+            font-size: 20px;
+        }
+
+    </style>
+
+
+    <div class="card mb-3" style="margin-top:30px;">
+        {% if extension == "mp" %}
+        <video width='800' height="240" controls>
+            <source src='{{ object.media.url }}' type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        {% else %}
+
+        <img src="{{ object.media.url }}" class="card-img-top"/>
+        {% endif %}
+        <div class="card-body" style="margin-top: 20px;">
+            <span class="card-title">{{ object.name }}</span>
+            <span class="price">{{ object.price_str }} </span>
+            <span class="select">{{ object.select }} </span>
+            <p class="address">{{ object.address }}</p>
+            <p class="card-text">{{ object.description }}</p>
+        </div>
+    </div>
+
+{% endblock %}

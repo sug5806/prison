@@ -15,7 +15,7 @@
         {% for object in object_list %}
             <tr>
                 <td>{{ object.id }}</td>
-                <td><a href="#">{{ object.name }}</a></td>
+                <td><a href="{% url 'room:detail' object.id %}">{{ object.name }}</a></td>
                 <td>{{ object.media }}</td>
                 <td>{{ object.select }}</td>
                 <td>{{ object.price_num }}{{ object.price_str }}</td>
