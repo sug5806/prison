@@ -300,5 +300,6 @@ venv/
 pyvenv.cfg
 pip-selfcheck.json
 .idea/
+config/__pycache__/
 
 # End of https://www.gitignore.io/api/venv,linux,django,python,pycharm
