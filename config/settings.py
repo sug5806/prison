@@ -55,7 +55,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'common_templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,3 +119,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+#######################################################
+# Media 파일이 저장될 위치
+# 프로젝트의 media폴더에 하겠다
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# Media 파일을 불러올 위치
+MEDIA_URL = "/media/"
+
+#######################################################

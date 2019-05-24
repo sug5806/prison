@@ -1,0 +1,27 @@
+    <table class="table table-striped table_list">
+        <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">건물종류</th>
+            <th scope="col">비디오</th>
+            <th scope="col">매매종류</th>
+            <th scope="col">가격</th>
+            <th scope="col">주소</th>
+        </tr>
+        </thead>
+
+        <tbody class="document_list">
+
+        {% for object in object_list %}
+            <tr>
+                <td>{{ object.id }}</td>
+                <td><a href="{% url 'room:detail' object.id%}">{{ object.name }}</a></td>
+                <td>{{ object.media }}</td>
+                <td>{{ object.select }}</td>
+                <td>{{ object.price_num }}{{ object.price_str }}</td>
+                <td>{{ object.address }}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table><br>
