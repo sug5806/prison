@@ -164,4 +164,3 @@ def detail(request, pk):
         return render(request, '', {'coord_lat': coord_lat,
                                     'coord_long': coord_long, 'jb_address': jb_address,
                                     'rd_address': rd_address})
-
