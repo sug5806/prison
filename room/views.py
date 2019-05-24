@@ -133,7 +133,6 @@ def detail(request, pk):
     if request.method == "GET":
         document = Media.objects.get(pk=pk)
         vdo = str(document.media)[-3:-1]
-
         address = document.address
         # full_address = 도로명 주소 + 상세 주소
         # 예)성수동 상원길 63 쌍용아파트 107동 101호 = 상원길 63 + 쌍용아파트 107동 101호
@@ -160,3 +159,4 @@ def detail(request, pk):
                                                           'address': address, 'coord_lat': coord_lat,
                                                           'coord_long': coord_long, 'jb_address': jb_address,
                                                           'rd_address': rd_address})
+
