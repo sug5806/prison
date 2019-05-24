@@ -37,17 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-    'naver_api',
-=======
     'room',
-    ##### 소셜로그인을 위함
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.naver',
->>>>>>> upstream/develop
 ]
 
 MIDDLEWARE = [
