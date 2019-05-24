@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'room',
-    ##### 소셜로그인을 위함
     'django.contrib.sites',
     'allauth',
     'allauth.account',
