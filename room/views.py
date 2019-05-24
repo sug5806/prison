@@ -166,3 +166,17 @@ def search(request):
                       'object_list': obj_list,
                   }
                   )
+
+
+def detail(request, pk):
+    if request.method == "GET":
+        document = Media.objects.get(pk=pk)
+        vdo = str(document.media)[-3:-1]
+        address = document.address
+        print(address)
+
+        return render(request, 'room/media_detail.html', {
+            'object': document,
+            'extension': vdo,
+            'address': address,
+        })
