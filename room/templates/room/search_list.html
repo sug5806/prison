@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    MAIN_PAGE
+{% endblock %}
+
+
+{% block content %}
+
+    {% include 'room/search_common.html' %}
+
+
+ {% include 'room/common_list.html' %}
+
+
+    <div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+
+                {% for page in range %}
+                    <li class="page-item"><a class="page-link btn_get_document"
+                                             href="{% url 'room:search' %}?page={{ page }}">{{ page }}</a></li>
+                {% endfor %}
+
+            </ul>
+        </nav>
+    </div>
+
+
+{% endblock %}

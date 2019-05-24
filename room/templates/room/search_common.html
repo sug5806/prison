@@ -1,0 +1,27 @@
+
+<div class="search_div mx-auto">
+    <form class="form-inline my-2 my-lg-0 " action="{% url 'room:search' %}" method="get">
+        <div>
+            <label name="cb">월세 <input class="checkbox-row" type="checkbox" name="cb" value="월세"></label>&nbsp;
+            <label name="cb">전세 <input class="checkbox-row" type="checkbox" name="cb" value="전세"></label>&nbsp;
+            <label name="cb">매매 <input class="checkbox-row" type="checkbox" name="cb" value="매매"></label>&nbsp;
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">최소 가격</span>
+            </div>
+            <input name="min_price" type="text" aria-label="min_price" class="form-control">
+            <div class="input-group-prepend">
+                <span class="input-group-text">최대 가격</span>
+            </div>
+            <input name="max_price" type="text" aria-label="max_price" class="form-control">
+        </div>
+
+        <br><br>
+
+        <input class="form-control mr-sm-2 search" type="text" name="search_key" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <br>
+</div>
