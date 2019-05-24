@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic.edit import CreateView
 from .models import NaverUser
 import requests
-# from .forms import AddressForm
+# from .forms import AddressForm # AddressForm : {class} 주소 입력창의 form
 
 
 # Create your views here.
@@ -14,8 +14,8 @@ class NaverAPI(CreateView):
     def post(self, request):
     # def map(self, search):
     #     result = search()
-    #     form = AddressForm()
-        address = request.POSTtgit.get('address')
+    #     form = AddressForm()  # 입력창(form 형태)
+        address = request.POST.get('address')
 
         # naver geocoding API - setting
         naver_url = "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query=" + address
@@ -39,6 +39,6 @@ class NaverAPI(CreateView):
         coord_lat = naver_req.json()["addresses"][0]["x"]
         coord_long = naver_req.json()["addresses"][0]["y"]
 
-        return render(request, self.template_name, {'form': form, 'coord_lat': coord_lat,
+        return render(request, self.template_name, {'coord_lat': coord_lat,
                                                     'coord_long': coord_long, 'jb_address': jb_address,
                                                     'rd_address': rd_address})
