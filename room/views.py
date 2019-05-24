@@ -126,6 +126,7 @@ def search(request):
         else:
             obj_list = obj_list & Media.objects.filter(temp_p)
 
+
     return render(request, 'room/search_list.html',
                   {
                       'object_list': obj_list,

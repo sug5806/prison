@@ -1,28 +1,43 @@
 {% extends 'base.html' %}
 
 {% block title %}
-MAIN_PAGE
+    MAIN_PAGE
 {% endblock %}
 
 
 {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
 
-{% include 'room/search_common.html' %}
+
+            <div class="col-8 col-md-8 col-lg-8">
+
+                {% include 'room/search_common.html' %}
 
 
-{% include 'room/common_list.html' %}
+                {% include 'room/common_list.html' %}
 
-<div>
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
+                <div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
 
-            {% for page in range %}
-            <li class="page-item"><a class="page-link btn_get_document"
-                                     href="{% url 'room:list' %}?page={{ page }}">{{ page }}</a></li>
-            {% endfor %}
+                            {% for page in range %}
+                                <li class="page-item"><a class="page-link btn_get_document"
+                                                         href="{% url 'room:list' %}?page={{ page }}">{{ page }}</a>
+                                </li>
+                            {% endfor %}
 
-        </ul>
-    </nav>
-</div>
+                        </ul>
+                    </nav>
+                </div>
+
+
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
 
 {% endblock %}
+
