@@ -1,7 +1,21 @@
 from django.shortcuts import render
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
+
 from .models import Media
 import math
 # Create your views here.
+
+
+@receiver(pre_save, sender = Media)
+def pre_save(sender, instance, **kwagrs):
+    dic = {'만': 1, '억': 10000, }
+    price = instance.price_str
+    price_n = int(price[:-1])
+    price_s = dic[price[-1]]
+
+    instance.price_real = price_n * price_s
+
 
 def showmedia(request):
 
