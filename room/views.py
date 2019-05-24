@@ -133,23 +133,17 @@ def detail(request, pk):
     if request.method == "GET":
         document = Media.objects.get(pk=pk)
         vdo = str(document.media)[-3:-1]
-        address = document.address
-        print(address)
 
-        return render(request, 'room/media_detail.html', {
-            'object': document,
-            'extension': vdo,
-            'address': address,
-        })
-    elif request.method == "POST":
-        address = request.POST.get('address')
+        address = document.address
+        # full_address = 도로명 주소 + 상세 주소
+        # 예)성수동 상원길 63 쌍용아파트 107동 101호 = 상원길 63 + 쌍용아파트 107동 101호
+
         # naver geocoding API - setting
         naver_url = "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query=" + address
         custom_headers = {
             "X-NCP-APIGW-API-KEY-ID": 'b4wnbq4cd7',
             "X-NCP-APIGW-API-KEY": "8o4ERGCLrQgfFb9qoXRmJELLQBI6N3kHxUjELMXX"
         }
-
         # road address API - setting
         confmkey = "U01TX0FVVEgyMDE5MDUyMzAwNDAwMzEwODc0Nzc="
         road_url = "http://www.juso.go.kr/addrlink/addrLinkApi.do?keyword=" + address + "&confmKey=" + confmkey + "&resultType=json"
@@ -161,6 +155,8 @@ def detail(request, pk):
         rd_address = road_req.json()["results"]["juso"][0]['roadAddr']
         coord_lat = naver_req.json()["addresses"][0]["x"]
         coord_long = naver_req.json()["addresses"][0]["y"]
-        return render(request, '', {'coord_lat': coord_lat,
-                                    'coord_long': coord_long, 'jb_address': jb_address,
-                                    'rd_address': rd_address})
+        return render(request, 'room/media_detail.html', {'object': document,
+                                                          'extension': vdo,
+                                                          'address': address, 'coord_lat': coord_lat,
+                                                          'coord_long': coord_long, 'jb_address': jb_address,
+                                                          'rd_address': rd_address})
