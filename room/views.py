@@ -8,6 +8,7 @@ from django.shortcuts import render
 
 from .models import Media
 
+from config import secret
 
 # from .forms import AddressForm # AddressForm : {class} 주소 입력창의 form
 
@@ -141,11 +142,11 @@ def detail(request, pk):
         # naver geocoding API - setting
         naver_url = "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query=" + address
         custom_headers = {
-            "X-NCP-APIGW-API-KEY-ID": 'zxqhlm25rh',
-            "X-NCP-APIGW-API-KEY": "KcJXNHFtDWYzS3BNdSyycWK1bxqx6Qvh6fQPfeDa"
+            "X-NCP-APIGW-API-KEY-ID": secret.KEY_ID,
+            "X-NCP-APIGW-API-KEY": secret.KEY
         }
         # road address API - setting
-        confmkey = "devU01TX0FVVEgyMDE5MDgxMzExNDkwMzEwODk0NjE="
+        confmkey = secret.confmkey
         road_url = "http://www.juso.go.kr/addrlink/addrLinkApi.do?keyword=" + address + "&confmKey=" + confmkey + "&resultType=json"
 
         # requests of both API
