@@ -6,9 +6,9 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from django.shortcuts import render
 
+from config import secret
 from .models import Media
 
-from config import secret
 
 # from .forms import AddressForm # AddressForm : {class} 주소 입력창의 form
 
@@ -24,7 +24,7 @@ def pre_save(sender, instance, **kwagrs):
     instance.price_real = price_n * price_s
 
 
-def showmedia(request):
+def show_media(request):
     page = int(request.GET.get('page', 1))
     paginated_by = 5
     rooms = Media.objects.all()
@@ -38,7 +38,6 @@ def showmedia(request):
     context = {
         'object_list': rooms,
         'range': rng,
-
     }
 
     return render(request, 'room/media_list.html', context)
@@ -143,7 +142,7 @@ def detail(request, pk):
         naver_url = "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query=" + address
         custom_headers = {
             "X-NCP-APIGW-API-KEY-ID": secret.KEY_ID,
-            "X-NCP-APIGW-API-KEY": secret.KEY
+            "X-NCP-APIGW-API-KEY": secret.KEY,
         }
         # road address API - setting
         confmkey = secret.confmkey
