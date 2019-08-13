@@ -1,14 +1,15 @@
-from django.shortcuts import render
-from django.views.generic.edit import CreateView
-import requests
-# from .forms import AddressForm # AddressForm : {class} 주소 입력창의 form
+import math
 
+import requests
+from django.db.models import Q
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
-from django.db.models import Q
+from django.shortcuts import render
 
 from .models import Media
-import math
+
+
+# from .forms import AddressForm # AddressForm : {class} 주소 입력창의 form
 
 
 # Create your views here.
@@ -22,8 +23,6 @@ def pre_save(sender, instance, **kwagrs):
     instance.price_real = price_n * price_s
 
 
-
-
 def showmedia(request):
     page = int(request.GET.get('page', 1))
     paginated_by = 5
@@ -34,8 +33,6 @@ def showmedia(request):
     end_index = paginated_by * page
     rooms = rooms[start_index:end_index]
     rng = range(1, math.ceil(total_count / paginated_by) + 1)
-
-
 
     context = {
         'object_list': rooms,
@@ -126,319 +123,6 @@ def search(request):
         else:
             obj_list = obj_list & Media.objects.filter(temp_p)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     return render(request, 'room/search_list.html',
                   {
                       'object_list': obj_list,
@@ -454,24 +138,27 @@ def detail(request, pk):
         full_address = document.address + " " + document.address_detail
         # full_address = 도로명 주소 + 상세 주소
         # 예)성수동 상원길 63 쌍용아파트 107동 101호 = 상원길 63 + 쌍용아파트 107동 101호
-
         # naver geocoding API - setting
         naver_url = "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query=" + address
         custom_headers = {
-            "X-NCP-APIGW-API-KEY-ID": 'b4wnbq4cd7',
-            "X-NCP-APIGW-API-KEY": "8o4ERGCLrQgfFb9qoXRmJELLQBI6N3kHxUjELMXX"
+            "X-NCP-APIGW-API-KEY-ID": 'zxqhlm25rh',
+            "X-NCP-APIGW-API-KEY": "KcJXNHFtDWYzS3BNdSyycWK1bxqx6Qvh6fQPfeDa"
         }
         # road address API - setting
-        confmkey = "U01TX0FVVEgyMDE5MDUyMzAwNDAwMzEwODc0Nzc="
+        confmkey = "devU01TX0FVVEgyMDE5MDgxMzExNDkwMzEwODk0NjE="
         road_url = "http://www.juso.go.kr/addrlink/addrLinkApi.do?keyword=" + address + "&confmKey=" + confmkey + "&resultType=json"
 
         # requests of both API
         naver_req = requests.get(naver_url, headers=custom_headers)
         road_req = requests.get(road_url)
         jb_address = road_req.json()["results"]["juso"][0]['jibunAddr']
+
         rd_address = road_req.json()["results"]["juso"][0]['roadAddr']
+
         coord_lat = naver_req.json()["addresses"][0]["x"]
+
         coord_long = naver_req.json()["addresses"][0]["y"]
+
         return render(request, 'room/media_detail.html', {'object': document,
                                                           'extension': vdo,
                                                           'address': address, 'coord_lat': coord_lat,
@@ -479,4 +166,3 @@ def detail(request, pk):
                                                           'rd_address': rd_address,
                                                           'full_address': full_address,
                                                           })
-
