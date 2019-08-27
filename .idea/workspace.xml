@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0755503e-c8b7-4dea-b1b1-92e35fe6c47b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/hack2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/123.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-05-08_15-45-08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-05-08_16-14-37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-05-08_16-14-45.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-05-08_16-33-09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_12-18-32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_12-18-32_tcHQnc4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_12-23-24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_12-23-24_JLOcgmQ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_12-23-24_SW0jIWz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_12-26-02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_12-28-42.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_14-23-06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_14-26-03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_14-37-14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_14-47-29.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_14-49-09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_14-50-16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="exclude__pycache__" pattern="file[hack2]:config/*" />
+  </component>
+  <component name="ProjectId" id="1PLp1uZQt3NKumqe2qS6JSrxnX7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.scopes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/room/templates/room" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0755503e-c8b7-4dea-b1b1-92e35fe6c47b" name="Default Changelist" comment="" />
+      <created>1558657769502</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1558657769502</updated>
+      <workItem from="1558657770708" duration="23473000" />
+      <workItem from="1558858198392" duration="652000" />
+      <workItem from="1558923868615" duration="16000" />
+      <workItem from="1559019953538" duration="65000" />
+      <workItem from="1559040631372" duration="1471000" />
+      <workItem from="1559562895194" duration="2672000" />
+      <workItem from="1565663025449" duration="14213000" />
+      <workItem from="1565683714556" duration="10443000" />
+      <workItem from="1566872030522" duration="2139000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
