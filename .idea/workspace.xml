@@ -2,34 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0755503e-c8b7-4dea-b1b1-92e35fe6c47b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/hack2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/123.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-05-08_15-45-08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-05-08_16-14-37.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-05-08_16-14-45.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-05-08_16-33-09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_12-18-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_12-18-32_tcHQnc4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_12-23-24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_12-23-24_JLOcgmQ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_12-23-24_SW0jIWz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_12-26-02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_12-28-42.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_14-23-06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_14-26-03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_14-37-14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_14-47-29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_14-49-09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/videos/스크린샷_2019-08-13_14-50-16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +94,7 @@
       <workItem from="1559562895194" duration="2672000" />
       <workItem from="1565663025449" duration="14213000" />
       <workItem from="1565683714556" duration="10443000" />
-      <workItem from="1566872030522" duration="2139000" />
+      <workItem from="1566872030522" duration="3504000" />
     </task>
     <servers />
   </component>
