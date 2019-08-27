@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Detail
+{% endblock %}
+
+{% load staticfiles %}
+{% block content %}
+    <style>
+        .card-title {
+            font-size: 50px;
+            font-family: sans-serif;
+        }
+
+        .card-text {
+        }
+
+        .price, .select {
+            font-family: sans-serif;
+            margin-left: 10px;
+            font-size: 30px;
+        }
+
+        .address {
+            font-size: 20px;
+        }
+
+    </style>
+
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8 col-md-8 col-lg-8">
+                <div class="card mb-3 bg-light border-light" style="margin-top:30px;">
+                    {% if extension == "mp" %}
+                        <video width='800' height="240" controls>
+                            <source src='{{ object.media.url }}' type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    {% else %}
+
+                        <img src="{{ object.media.url }}" class="card-img-top"/>
+                    {% endif %}
+                    <div class="card-body" style="margin-top: 20px;">
+                        <span class="card-title">{{ object.name }}</span>
+                        <span class="price">{{ object.price_str }} </span>
+                        <span class="select">{{ object.select }} </span>
+                        <p class="address">{{ object.address }} {{ object.address_detail }}</p>
+                        <p class="card-text">{{ object.description }}</p>
+                        <div id="map" style="width:100%;height:500px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block extra_script %}
+    <script>
+        var HOME_PATH = window.HOME_PATH || '.';
+        var cityhall = new naver.maps.LatLng({{coord_long}}, {{coord_lat}}),
+            map = new naver.maps.Map('map', {
+                center: cityhall,
+                zoom: 13
+            }),
+            marker = new naver.maps.Marker({
+                map: map,
+                position: cityhall
+            });
+        var contentString = [
+            '<div class="iw_inner">',
+            '   <h4>도로명 주소: {{rd_address}}</h4>',
+            '   <p>지번 주소: {{jb_address}}<br />',
+            '   </p>',
+            '</div>'
+        ].join('');
+
+        var infowindow = new naver.maps.InfoWindow({
+            content: contentString
+        });
+
+        naver.maps.Event.addListener(marker, "click", function (e) {
+            if (infowindow.getMap()) {
+                infowindow.close();
+            } else {
+                infowindow.open(map, marker);
+            }
+        });
+        infowindow.open(map, marker);
+    </script>
+{% endblock %}

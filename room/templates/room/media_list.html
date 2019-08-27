@@ -1,29 +1,53 @@
 {% extends 'base.html' %}
 
 {% block title %}
-MAIN_PAGE
+    MAIN_PAGE
 {% endblock %}
 
 
 {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8 col-md-8 col-lg-8">
+                {% include 'room/search_common.html' %}
+                {% include 'room/common_list.html' %}
+                <div>
+                    <nav aria-label="Page navigation example pagination-lg ">
+                        <ul class="pagination justify-content-center">
 
-{% include 'room/search_common.html' %}
+                            {% for page in range %}
+                                <li class="page-item">
+                                    <a class="page-link btn_get_document" id="list_btn"
+                                       href="{% url 'room:list' %}?page={{ page }}">{{ page }}</a>
+                                </li>
+                            {% endfor %}
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
 
 
+{% endblock %}
 
-{% include 'room/common_list.html' %}
+{% block extra_script %}
+    <script type="text/javascript">
+        $('.btn_get_document').click(function (e) {
+            e.preventDefault();
+            // 페이지번호를 누르면 url 가져옴
+            url = $(this).attr('href');
 
-<div>
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
+            $.ajax({
+                url: url
+            }).done(function (data) {
+                var rp_list = $(data).find('.table');
+                $('.table').html(rp_list);
 
-            {% for page in range %}
-            <li class="page-item"><a class="page-link btn_get_document"
-                                     href="{% url 'room:list' %}?page={{ page }}">{{ page }}</a></li>
-            {% endfor %}
-
-        </ul>
-    </nav>
-</div>
-
+            });
+        });
+    </script>
 {% endblock %}
